@@ -2,19 +2,21 @@ import Button from "./Button";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
+
 export default function Suggestions() {
+
 return (
     <>
     <div className="flex flex-row" >
         <div>
             <Sidebar />
         </div>
-        <div>
+        <div className="flex flex-col">
             <Navbar /> 
-            <div className="bar bg-white mr-40 mt-6 rounded-sm">
-                <div className="items-center justify-center flex flex-col pt-28 pb-28 mx-auto mb-20 " >
+            <div className="bar bg-white md:mx-0 mx-6 md:mr-40 mt-6 rounded-sm">
+                <div className="items-center justify-center flex flex-col pt-20 md:pt-28 pb-20 md:pb-28 mx-auto mb-20 " >
                     <svg 
-                    className=""
+                    className="sm:mx-28 mx-10 md:mx-0 md:mt-0 mt-10"
                     xmlns="http://www.w3.org/2000/svg" width="131" height="137" viewBox="0 0 131 137" fill="none">
                         <g opacity="0.5">
                             <path d="M62.8268 19.7428C33.7105 19.7372 10.1005 43.3321 10.0874 72.4484C10.0743 101.565 33.6632 125.181 62.7794 125.201C91.8957 125.222 115.518 101.639 115.546 72.5228C115.562 58.5303 110.015 45.1053 100.126 35.2054C90.2379 25.3055 76.8193 19.7428 62.8268 19.7428Z" stroke="#3A4374" stroke-width="1.04545" stroke-linecap="round" stroke-linejoin="round"/>
@@ -39,13 +41,41 @@ return (
                             <ellipse cx="50.7892" cy="57.988" rx="3.42055" ry="6.18135" fill="#3A4374"/>
                         </g>
                     </svg>
-                    <h1 className="text-center font-jost text-2xl font-bold tracking-wide text-darkNavy mt-14" >There is no feedback yet.</h1>
-                    <p className="text-center font-jost text-base font-normal text-lightGrey mt-4 mx-52 mb-12 " >Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our app.</p>
+                    <h1 className="text-center mx-9 md:mx-0  font-jost text-2xl md:tracking-wide text-darkNavy mt-10 md:mt-14 font-bold text-18 leading-normal tracking-tighter" >There is no feedback yet.</h1>
+                    <p className="text-center font-jost text-base font-normal text-lightGrey mt-4 mx-6 md:mx-52 mb-6 md:mb-12 " >Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our app.</p>
                     <Button  />
+                    </div>
                 </div>
+                
+                <div className="grid grid-rows-6 bg-white rounded-lg md:mr-40  ">
+                        <div className=" flex flex-col md:flex-row-reverse text-left" >
+                            <div className="flex flex-col ">
+                                 <h2 className="font-jost text-darkNavy text-lg font-bold leading-normal tracking-tighter">Q&A within the challenge hubs</h2>
+                                    <p className="font-jost font-normal leading-normal text-lightGrey text-base mt-1 " >Challenge-specific Q&A would make for easy reference.</p>
+                                    <p className="text-blue font-jost text-base font-semibold leading-normal py-1 px-4 bg-pastelPurple rounded-lg mt-3 mr-80 mb-7 " >Feature</p>
+                            </div>
 
-        </div> 
-        </div>
+                            <div>
+                                <div>
+                                    <svg
+                                    className=" "
+                                    xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
+                                        <path d="M1.33447 6L5.33447 2L9.33447 6" stroke="#4661E6" stroke-width="2"/>
+                                    </svg>
+                                    <p className="text-center font-jost text-13 font-bold leading-normal tracking-tight text-darkNavy" >99</p> 
+                                </div>
+                                <div>
+                                 <svg 
+                                className=""
+                                xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                                    <path d="M2.62074 16H1.34534L2.24718 15.0895C2.73344 14.5986 3.0371 13.9601 3.11873 13.2674C1.03637 11.8878 0 9.88917 0 7.79388C0 3.92832 3.51913 0 9.0305 0C14.8692 0 18 3.61479 18 7.45522C18 11.321 14.8361 14.9333 9.0305 14.9333C8.0135 14.9333 6.95226 14.7963 6.00478 14.5448C5.10787 15.4735 3.89262 16 2.62074 16Z" fill="#CDD2EE"/>
+                                </svg>
+                                <p className=" text-darkNavy text-center font-jost text-base font-bold leading-normal tracking-tighter ">1</p> 
+                                </div>
+                            </div>                       
+                        </div>
+                    </div>
+            </div>
         </div>
         </>
 )
