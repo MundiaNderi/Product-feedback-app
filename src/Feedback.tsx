@@ -1,18 +1,31 @@
 import "./Feedback.css";
 import FeedbackData from "/data.json";
 
-export default function Feedback() {
+interface Feedback {
+  id: number; 
+  upvotes: number;
+  title: string; 
+  description: string; 
+  status: string; 
+  comments: string[];
+}
+
+interface Feedback {
+  feedback: Feedback;
+}
+
+export default function Feedback({ feedback }: { feedback: Feedback }) {
   console.log(FeedbackData);
 
   return (
-    <div className="grid grid-rows-6 bg-white rounded-lg md:mr-40">
+    <div className="feedback grid grid-rows-6 bg-white rounded-lg md:mr-40">
       {Array.isArray(FeedbackData.productRequests) &&
         FeedbackData.productRequests.map((feedback) => {
           return (
             <div key={feedback.id} className="flex flex-col md:flex-row mx-6 justify-between ">
               <div className="hidden bg-pastelPurple w-10 h-14 items-center rounded-md ml-8 md:flex flex-col mt-7 hover:bg-blue ">
                 <svg
-                  className="mt-3 mx-4 mb-2 hover:fill-white "
+                  className="mt-3 mx-4 mb-2 dropdown "
                   xmlns="http://www.w3.org/2000/svg"
                   width="11"
                   height="7"
