@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
                 </svg>
                 <Link to="/suggestions" className="font-jost text-base font-bold text-lightGrey mr-60 md:mr-96  sm:text-13 sm:leading-normal">Go Back</Link>
             </div>
+
             <div className="bg-white px-10 " >
                 <svg 
                 className="-mt-6 mr-66 md:mr-0"
