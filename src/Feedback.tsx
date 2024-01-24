@@ -1,5 +1,5 @@
 import "./Feedback.css";
-import FeedbackData from "/data.json";
+import FeedbackData from '../data.json';
 
 interface Feedback {
   id: number; 
@@ -10,11 +10,7 @@ interface Feedback {
   comments: string[];
 }
 
-interface Feedback {
-  feedback: Feedback;
-}
-
-export default function Feedback({ feedback }: { feedback: Feedback }) {
+export default function Feedback() {
   console.log(FeedbackData);
 
   return (
