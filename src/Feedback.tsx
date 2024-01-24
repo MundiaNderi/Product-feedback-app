@@ -9,10 +9,10 @@ export default function Feedback() {
       {Array.isArray(FeedbackData.productRequests) &&
         FeedbackData.productRequests.map((feedback) => {
           return (
-            <div key={feedback.id} className="flex flex-col md:flex-row mx-6">
-              <div className="hidden bg-pastelPurple w-10 h-14 items-center rounded-md ml-8 md:flex flex-col mt-7">
+            <div key={feedback.id} className="flex flex-col md:flex-row mx-6 justify-between ">
+              <div className="hidden bg-pastelPurple w-10 h-14 items-center rounded-md ml-8 md:flex flex-col mt-7 hover:bg-blue ">
                 <svg
-                  className="mt-3 mx-4 mb-2"
+                  className="mt-3 mx-4 mb-2 hover:fill-white "
                   xmlns="http://www.w3.org/2000/svg"
                   width="11"
                   height="7"
@@ -21,13 +21,12 @@ export default function Feedback() {
                 >
                   <path d="M1.33447 6L5.33447 2L9.33447 6" stroke="#4661E6" stroke-width="2" />
                 </svg>
-                <p className="text-center font-jost text-13 font-bold leading-normal tracking-tight text-darkNavy mb-2 mx-3">
+                <p className="text-center font-jost text-13 font-bold leading-normal tracking-tight text-darkNavy mb-2 mx-3 hover:text-white ">
                   {feedback.upvotes}
                 </p>
               </div>
-
-              <div>
-                <h2 className="font-jost text-darkNavy text-lg font-bold leading-normal tracking-tighter mt-6 md:mt-7 mx-6">
+              <div className="mr-0 md:mr-40" >
+                <h2 className="font-jost text-darkNavy text-lg font-bold leading-normal tracking-tighter mt-6 md:mt-7 mx-6 hover:text-blue ">
                   {feedback.title}
                 </h2>
                 <p className="font-jost font-normal leading-normal text-lightGrey text-base mt-2 md:mt-1 ml-6 ">
@@ -38,9 +37,9 @@ export default function Feedback() {
                 </p>
               </div>
 
-              <div className="hidden md:flex flex-row mt-7 items-center ">
+              <div className="hidden md:flex flex-row mt-8 mb-16 items-center ">
                 <svg
-                  className="ml-52 "
+                  className="items-end "
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
                   height="16"
@@ -52,7 +51,7 @@ export default function Feedback() {
                     fill="#CDD2EE"
                   />
                 </svg>
-                <p className=" text-darkNavy text-center font-jost text-base font-bold leading-normal tracking-tighter ml-2">
+                <p className=" text-darkNavy text-center font-jost text-base font-bold leading-normal tracking-tighter ml-2 mr-4">
                   {feedback.comments ? feedback.comments.length : 0}
                 </p>
               </div>
@@ -86,7 +85,7 @@ export default function Feedback() {
                       fill="#CDD2EE"
                     />
                   </svg>
-                  <p className=" text-darkNavy text-center font-jost text-base font-bold leading-normal tracking-tighter">1</p>
+                  <p className=" text-darkNavy text-center font-jost text-base font-bold leading-normal tracking-tighter">{feedback.comments ? feedback.comments.length : 0}</p>
                 </div>
               </div>
             </div>
