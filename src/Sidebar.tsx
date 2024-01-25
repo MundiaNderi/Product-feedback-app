@@ -1,4 +1,5 @@
 import '/src/Sidebar.css'
+import { Link } from 'react-router-dom';
 
 export default function Sidebar() {
     return (
@@ -27,7 +28,7 @@ export default function Sidebar() {
             <div className="roadmap bg-white mt-6 px-6 " >
                 <div className='flex flex-row pt-5' >
                     <h2 className='mr-24 font-jost text-xl font-bold tracking-wide text-darkNavy' >Roadmap</h2>
-                    <a className='font-jost text-sm font-semibold underline opacity-25 ' href='/'>view</a>
+                    <Link className='font-jost text-sm font-semibold underline opacity-25 ' to='/view'>view</Link>
                 </div>
                 <div className='flex flex-row items-center mt-6 ' >
                     <svg 

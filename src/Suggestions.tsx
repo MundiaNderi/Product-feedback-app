@@ -1,22 +1,40 @@
+import React, { useState } from 'react';
 import Button from "./Button";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import Feedback from "./Feedback"
+import Feedback from "./Feedback";
+import getFeedbackData from '../feedbackService'
 
 export default function Suggestions() {
+  const [feedbackData, setFeedbackData] = useState(getFeedbackData());
+  const hasFeedback = Array.isArray(feedbackData) && feedbackData.length > 0;
 
-return (
+  const handleAddFeedback = (newFeedback) => {
+    setFeedbackData([...feedbackData, newFeedback]);
+  };
+
+  const newFeedback = {
+      id: 0,
+      title: '', 
+      description: '',
+      status: '',
+      comments: [],
+  }
+
+
+  return (
     <>
-    <div className="flex flex-row" >
-        <div>
-            <Sidebar />
-        </div>
+      <div className="flex flex-row mb-8 ">
+        <Sidebar />
         <div className="flex flex-col">
-            <Navbar /> 
-
-            {/* Give the option to add feedback while none are present*/} 
-
-            <div className="bar bg-white md:mx-0 mx-6 md:mr-40 mt-6 rounded-sm">
+          <Navbar />
+          {hasFeedback ? (
+            <Feedback feedbackData={feedbackData} />
+          ) : (
+            <div className="flex flex-col items-center justify-center h-full">
+              <p>No feedback yet. Share your thoughts!</p>
+              {/* Render your form or modal for adding feedback */}
+                <div className="bar bg-white md:mx-0 mx-6 md:mr-40 mt-6 rounded-sm">
                 <div className="items-center justify-center flex flex-col pt-20 md:pt-28 pb-20 md:pb-28 mx-auto mb-20 " >
                     <svg 
                     className="sm:mx-28 mx-10 md:mx-0 md:mt-0 mt-10"
@@ -46,12 +64,14 @@ return (
                     </svg>
                     <h1 className="text-center mx-9 md:mx-0  font-jost text-2xl md:tracking-wide text-darkNavy mt-10 md:mt-14 font-bold text-18 leading-normal tracking-tighter" >There is no feedback yet.</h1>
                     <p className="text-center font-jost text-base font-normal text-lightGrey mt-4 mx-6 md:mx-52 mb-6 md:mb-12 " >Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our app.</p>
-                    <Button  />
+                   <Button onClick={() => handleAddFeedback(newFeedback)} />
                     </div>
                 </div>
-                <Feedback />  
             </div>
+          )}
         </div>
-        </>
-)
-} 
+      </div>
+    </>
+  );
+}
+

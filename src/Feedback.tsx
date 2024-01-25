@@ -14,7 +14,7 @@ export default function Feedback() {
   console.log(FeedbackData);
 
   return (
-    <div className="feedback grid grid-rows-6 bg-white rounded-lg md:mr-40">
+    <div className="feedback grid grid-rows-6 bg-white rounded-lg md:mr-40 mt-6 ">
       {Array.isArray(FeedbackData.productRequests) &&
         FeedbackData.productRequests.map((feedback) => {
           return (
@@ -67,7 +67,7 @@ export default function Feedback() {
 
               {/* Mobile only*/}
               <div className="md:hidden sm:flex flex-row mx-6 ">
-                <div className="flex flex-row items-center bg-pastelPurple rounded-lg w-16 h-8 ">
+                <div className="flex flex-row items-center bg-pastelPurple rounded-lg w-16 h-8 hover:bg-blue ">
                   <svg
                     className="mr-2 ml-4 "
                     xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ export default function Feedback() {
                   >
                     <path d="M1.33447 6L5.33447 2L9.33447 6" stroke="#4661E6" stroke-width="2" />
                   </svg>
-                  <p className="text-center font-jost text-13 font-bold leading-normal tracking-tight text-darkNavy mr-3">99</p>
+                  <p className="text-center font-jost text-13 font-bold leading-normal tracking-tight text-darkNavy mr-3 hover:text-white ">99</p>
                 </div>
                 <div className="flex flex-row items-center mb-6 ">
                   <svg
