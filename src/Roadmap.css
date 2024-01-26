@@ -1,0 +1,14 @@
+.planned {
+    border-radius: 5px 5px 0px 0px;
+    border-radius: 20px;
+    background: var(--Pure-White, #FFF);
+    box-shadow: 8px 8px 0px 0px #F49F85;
+}
+
+.progress {
+
+
+}
+
+.live {}
+
