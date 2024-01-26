@@ -1,11 +1,20 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
-import './Roadmap.css'
+import "./Roadmap.css"
 
 export default function Roadmap() {
+
+    const [toggleState, setToggleState] = useState(1);
+
+    const toggleTab = (index) => {
+        setToggleState(index);
+    }
+
     return (
         <>
-        <div className='md:mx-40'>
+        <div className='md:mx-40 flex flex-col'>
+
              {/*Header*/}
             <div className='flex flex-row items-center justify-between bg-navyBlue md:mt-20 rounded-md ' >
                 <div className='mx-6 md:mx-0 md:ml-8 md:mr-10 items-center' >
@@ -20,16 +29,30 @@ export default function Roadmap() {
                     <h2 className='text-white ml-6 mb-6 font-jost text-base font-bold tracking-tight' >Roadmap</h2>
                 </div>
                 <Button />
-            </div>
+            </div >
 
-            <div className='grid grid-cols-3 gap-2 mt-12 '>
+            {/*Mobile Sub Header for tabs*/}
+            <div className='flex flex-row justify-between mx-6 my-5' >
+                <div className={`tabs md:hidden text-darkNavy opacity-40 text-center font-jost text-13 font-bold leading-normal tracking-wide hover:text-darkNavy
+                ${toggleState === 1 ? "tabs active-tabs" : "tabs"}`}
+                onClick={() => toggleTab(1)}>Planned (2)</div>
+
+               <div className={` md:hidden tabs text-darkNavy opacity-40 text-center font-jost font-bold leading-normal tracking-tighter 
+               ${toggleState === 2 ? "tabs active-tabs" : "tabs"}`}
+               onClick={() => toggleTab(2)} >In-Progress (3)</div>
+               <div className={` md:hidden tabs text-darkNavy opacity-40 text-center font-jost font-bold leading-normal tracking-tighter 
+               ${toggleState === 3 ? "tabs active-tabs" : "tabs"}`}
+               onClick={() => toggleTab(3)} >Live (1)</div>
+            </div>
+            <hr className='md:hidden' />
+
+            <div className='grid grid-cols-3 gap-1 mt-12 content-tabs '>
+
                 {/*Planned */}
-                <div className='' >
-                    <p className=' md:hidden pr-4 text-center font-jost font-bold leading-normal tracking-tighter' >Planned (2)</p>
-                     <div className=' mx-6' >
+                     <div className={`mx-6 flex-row sm:${toggleState === 1 ? "content active-content" : "content"}`} >
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >Planned (2)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Ideas prioritized for research</p>
-                    <div className='flex flex-col mt-8 rounded-5 bg-white rounded-md px-8 planned' >
+                    <div className='flex flex-col mt-8 rounded-md px-8 planned' >
                         <div className='flex flex-row items-center mt-6' >
                             <svg className='mr-4' xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                 <circle cx="4" cy="4" r="4" fill="#F49F85"/>
@@ -55,15 +78,13 @@ export default function Roadmap() {
                                 <p className='text-center ml-2 text-darkNavy  font-jost font-bold leading-normal tracking-tighter' >2</p>
                             </div>
                         </div>
-                    </div> 
-                </div>
+                    </div>
                 </div>
 
 
                 {/*In Progress*/}
                 <div className='' >
-                    <p className=' md:hidden pr-4 text-center font-jost font-bold leading-normal tracking-tighter' >In-Progress (3)</p>
-                     <div className=' mx-6' >
+                     <div className={`mx-6 sm:${toggleState === 2 ? "content active-content" : "content"}`}>
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >In-Progress (3)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Features currently being developed</p>
                     <div className='flex flex-col mt-8 rounded-5 bg-white px-8 rounded-md progress ' >
@@ -99,8 +120,7 @@ export default function Roadmap() {
 
                 {/*Live*/}
                 <div className='' >
-                    <p className=' md:hidden pr-4 text-center font-jost font-bold leading-normal tracking-tighter' >Live (1)</p>
-                     <div className=' mx-6' >
+                     <div className={`mx-6 sm:${toggleState === 3 ? "content active-content" : "content"}`} >
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >Live (1)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Released features</p>
                     <div className='flex flex-col mt-8 rounded-5 bg-white px-8 live' >

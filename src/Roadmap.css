@@ -2,13 +2,25 @@
     border-radius: 5px 5px 0px 0px;
     border-radius: 20px;
     background: var(--Pure-White, #FFF);
-    box-shadow: 8px 8px 0px 0px #F49F85;
+    box-shadow: 0px 0px 0px 0px #F49F85;
+}
+.content {
+    display: none;
 }
 
-.progress {
-
-
+.active-content {
+    display: block;
 }
 
-.live {}
+.active-tabs {
+    background: white;
+    text-decoration: underline;
+}
 
+.active-tabs::before {
+    content: "";
+    display: block;
+}
+.content {
+    display: none;
+}

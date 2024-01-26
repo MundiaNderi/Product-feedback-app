@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
@@ -12,6 +12,7 @@ export default function Suggestions() {
   const handleAddFeedback = (newFeedback) => {
     setFeedbackData([...feedbackData, newFeedback]);
   };
+
 
   const newFeedback = {
       id: 0,
