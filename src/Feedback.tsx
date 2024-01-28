@@ -35,10 +35,10 @@ export default function Feedback() {
                 </p>
               </div>
               <div className="mr-0 md:mr-40 flex flex-col" >
-                <h2 className="font-jost text-darkNavy text-lg font-bold leading-normal tracking-tighter mt-6 md:mt-7 mx-6 hover:text-blue ">
+                <h2 className="font-jost text-darkNavy text-lg font-bold leading-normal tracking-tighter mt-6 md:mt-7 sm:mx-6 hover:text-blue ">
                   {feedback.title}
                 </h2>
-                <p className="font-jost font-normal leading-normal text-lightGrey text-base mt-2 md:mt-1 mx-6 md:mx-0">
+                <p className="font-jost font-normal leading-normal text-lightGrey text-base mt-2 md:mt-1 mx-6 md:mx-6">
                   {feedback.description}
                 </p>
                 <p className="text-blue font-jost text-base font-semibold leading-normal py-1 px-4 bg-pastelPurple rounded-lg mt-3  ml-6 mr-48 md:mr-80 md:mb-7 ">

@@ -4,12 +4,15 @@ import { Link } from 'react-router-dom';
 export default function Sidebar() {
     return (
         <div className='hidden mt-24 mr-8 ml-40 rounded-md md:flex md:flex-col' >
+            {/*Feedback Board*/}
             <div className="mentorboard md:inline-flex flex-col justify-center items-start" >
                 <h2 className='ml-6 mt-16 mr-20 text-white font-jost text-20 font-normal md:font-bold leading-normal tracking-tighter md:tracking-normal'>
                     Frontend Mentor
                 </h2>
                 <p className='mb-6 ml-6 mr-30 text-white font-jost text-15 font-medium leading-normal'>Feedback Board</p>
             </div>
+
+            {/*Filters */}
             <div className="tags mt-6 bg-white " >
                 <div className='flex-row mt-6 ml-6'>
                     <a className='font-jost text-blue py-1 px-4 bg-pastelPurple text-sm font-semibold mr-2 rounded-md' href='/'>All</a>
@@ -24,7 +27,8 @@ export default function Sidebar() {
                     <a className='font-jost text-blue py-1 px-4 bg-pastelPurple text-sm font-semibold mr-2 rounded-md' href='/'>Feature</a>
                 </div>
             </div>
-            
+
+            {/* Roadmap */}
             <div className="roadmap bg-white mt-6 px-6 " >
                 <div className='flex flex-row pt-5' >
                     <h2 className='mr-24 font-jost text-xl font-bold tracking-wide text-darkNavy' >Roadmap</h2>
