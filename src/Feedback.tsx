@@ -19,7 +19,7 @@ export default function Feedback() {
         FeedbackData.productRequests.map((feedback) => {
           return (
             <div key={feedback.id} className="flex flex-col md:flex-row mx-6 md:mx-0  bg-white justify-between my-4 rounded-lg ">
-              <div className="hidden w-10 h-14 items-center rounded-md ml-8 md:flex flex-col mt-7 hover:bg-blue ">
+              <div className="hidden bg-pastelPurple w-10 h-14 items-center rounded-md ml-8 md:flex flex-col mt-7 hover:bg-blue ">
                 <svg
                   className="mt-3 mx-4 mb-2 dropdown "
                   xmlns="http://www.w3.org/2000/svg"
@@ -34,14 +34,14 @@ export default function Feedback() {
                   {feedback.upvotes}
                 </p>
               </div>
-              <div className="mr-0 md:mr-40 flex flex-col" >
+              <div className="mr-0 md:mr-40 md:ml-10 flex flex-col" >
                 <h2 className="font-jost text-darkNavy text-lg font-bold leading-normal tracking-tighter mt-6 md:mt-7 sm:mx-6 hover:text-blue ">
                   {feedback.title}
                 </h2>
                 <p className="font-jost font-normal leading-normal text-lightGrey text-base mt-2 md:mt-1 mx-6 md:mx-6">
                   {feedback.description}
                 </p>
-                <p className="text-blue font-jost text-base font-semibold leading-normal py-1 px-4 bg-pastelPurple rounded-lg mt-3  ml-6 mr-48 md:mr-80 md:mb-7 ">
+                <p className="text-blue font-jost text-base font-semibold leading-normal py-1 px-4 bg-pastelPurple rounded-lg mt-3  ml-6 mr-60 md:mr-80 md:mb-7 ">
                   {feedback.status}
                 </p>
               </div>

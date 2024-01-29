@@ -3,6 +3,7 @@ import Button from "./Button";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import Feedback from "./Feedback";
+import Header from "./Header";
 import getFeedbackData from '../feedbackService'
 
 export default function Suggestions() {
@@ -14,23 +15,15 @@ export default function Suggestions() {
   };
 
 
-  const newFeedback = {
-      id: 0,
-      title: '', 
-      description: '',
-      status: '',
-      comments: [],
-  }
-
-
   return (
     <>
       <div className="flex flex-row mb-8 ">
         <Sidebar />
         <div className="flex flex-col">
+          <Header/>
           <Navbar />
           {hasFeedback ? (
-            <Feedback feedbackData={feedbackData} />
+            <Feedback FeedbackData={feedbackData} />
           ) : (
             <div className="flex flex-col items-center justify-center h-full">
               <p>No feedback yet. Share your thoughts!</p>
@@ -65,7 +58,7 @@ export default function Suggestions() {
                     </svg>
                     <h1 className="text-center mx-9 md:mx-0  font-jost text-2xl md:tracking-wide text-darkNavy mt-10 md:mt-14 font-bold text-18 leading-normal tracking-tighter" >There is no feedback yet.</h1>
                     <p className="text-center font-jost text-base font-normal text-lightGrey mt-4 mx-6 md:mx-52 mb-6 md:mb-12 " >Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our app.</p>
-                   <Button onClick={() => handleAddFeedback(newFeedback)} />
+                     <Button onClick={() => handleAddFeedback(newFeedback)} />
                     </div>
                 </div>
             </div>

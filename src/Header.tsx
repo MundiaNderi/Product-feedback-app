@@ -8,7 +8,7 @@ export default function Header() {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const handleToggle = (toggled) => {
+    const handleToggle = (toggled: boolean) => {
         setMenuOpen(toggled)
     }
     return (
@@ -28,10 +28,11 @@ export default function Header() {
                     />
             </div>
 
-            {/* Filters */}
-            {menuOpen && 
-                <div className='flex flex-col mt-60  absolute ml-28  bg-pastelPurple border border-rose-500 ' >
-                    <div className="tags mt-60 absolute bg-white flex-col mx-6 " >
+            {menuOpen && (
+                <div className='flex absolute flex-col mt-16  ml-28  border-gray-950 ' >
+                    {/* Filters */}
+                    <div className="absolute flex-col px-6 py-6 rounded-md" >
+                        <div className='bg-pastelPurple' >
                         <div className='flex-row  ml-6'>
                             <a className='font-jost text-blue py-1 px-4 bg-pastelPurple text-sm font-semibold mr-2 rounded-md' href='/'>All</a>
                             <a className='font-jost text-blue py-1 px-4 bg-pastelPurple text-sm font-semibold mr-2 rounded-md' href='/'>UI</a>
@@ -44,10 +45,10 @@ export default function Header() {
                         <div className='ml-6 mt-3 mb-6' >
                             <a className='font-jost text-blue py-1 px-4 bg-pastelPurple text-sm font-semibold mr-2 rounded-md' href='/'>Feature</a>
                         </div>
-            </div>
-
-            {/*Roadmap */}
-            <div className="roadmap absolute bg-white mt-6 mx-6 px-6 flex-col " >
+                        </div>
+                    {/*Roadmap*/}
+                    {menuOpen && (
+                <div className="roadmap absolute bg-white mt-6 mx-6 px-6 flex-col " >
                 <div className='flex  flex-row pt-5' >
                     <h2 className='mr-24 font-jost text-xl font-bold tracking-wide text-darkNavy' >Roadmap</h2>
                     <Link className='font-jost text-sm font-semibold underline opacity-25 ' to='/view'>view</Link>
@@ -80,8 +81,9 @@ export default function Header() {
                         <p className='ml-36 text-lightGrey font-bold ' >0</p>
                     </div>
             </div> 
+                    )}
             </div>
-            }
             </div>
-    )
-}
+            )}
+            </div>
+    )}

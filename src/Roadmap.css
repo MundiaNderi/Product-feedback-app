@@ -4,9 +4,6 @@
     background: var(--Pure-White, #FFF);
     box-shadow: 0px 0px 0px 0px #F49F85;
 }
-.content {
-    display: none;
-}
 
 .active-content {
     display: block;

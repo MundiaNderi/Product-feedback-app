@@ -7,9 +7,11 @@ export default function Roadmap() {
 
     const [toggleState, setToggleState] = useState(1);
 
-    const toggleTab = (index) => {
+
+    const toggleTab = (index: number) => {
         setToggleState(index);
     }
+
 
     return (
         <>
@@ -40,16 +42,17 @@ export default function Roadmap() {
                <div className={` md:hidden tabs text-darkNavy opacity-40 text-center font-jost font-bold leading-normal tracking-tighter 
                ${toggleState === 2 ? "tabs active-tabs" : "tabs"}`}
                onClick={() => toggleTab(2)} >In-Progress (3)</div>
+
                <div className={` md:hidden tabs text-darkNavy opacity-40 text-center font-jost font-bold leading-normal tracking-tighter 
                ${toggleState === 3 ? "tabs active-tabs" : "tabs"}`}
                onClick={() => toggleTab(3)} >Live (1)</div>
             </div>
             <hr className='md:hidden' />
 
-            <div className='grid grid-cols-3 gap-1 mt-12 content-tabs '>
+            <div className='grid grid-cols-3 gap-1 mt-12'>
 
                 {/*Planned */}
-                     <div className={`mx-6 flex-row sm:${toggleState === 1 ? "content active-content" : "content"}`} >
+                     <div className={`mx-6 flex-col border border-rose-500 md:flex-row sm:${toggleState ===1 ? "active-tabs active-content" : "content tabs"}`} >
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >Planned (2)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Ideas prioritized for research</p>
                     <div className='flex flex-col mt-8 rounded-md px-8 planned' >
@@ -83,8 +86,7 @@ export default function Roadmap() {
 
 
                 {/*In Progress*/}
-                <div className='' >
-                     <div className={`mx-6 sm:${toggleState === 2 ? "content active-content" : "content"}`}>
+                     <div className={`mx-6  sm:${toggleState === 2 ? "active-tabs active-content" : "content tabs"}`}>
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >In-Progress (3)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Features currently being developed</p>
                     <div className='flex flex-col mt-8 rounded-5 bg-white px-8 rounded-md progress ' >
@@ -115,12 +117,10 @@ export default function Roadmap() {
                         </div>
                     </div> 
                 </div>
-                </div>
 
 
                 {/*Live*/}
-                <div className='' >
-                     <div className={`mx-6 sm:${toggleState === 3 ? "content active-content" : "content"}`} >
+                     <div className={`mx-6 sm:${toggleState === 3 ? "active-tabs active-content" : "content tabs"}`} >
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >Live (1)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Released features</p>
                     <div className='flex flex-col mt-8 rounded-5 bg-white px-8 live' >
@@ -150,7 +150,6 @@ export default function Roadmap() {
                             </div>
                         </div>
                     </div> 
-                </div>
                 </div>
             </div>
             </div>
