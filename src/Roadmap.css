@@ -1,8 +1,8 @@
+/* Your existing styles */
 .planned {
     border-radius: 5px 5px 0px 0px;
-    border-radius: 20px;
-    background: var(--Pure-White, #FFF);
-    box-shadow: 0px 0px 0px 0px #F49F85;
+    background: #F49F85;
+    height: 6px;
 }
 
 .active-content {
@@ -18,6 +18,13 @@
     content: "";
     display: block;
 }
+
 .content {
     display: none;
+}
+
+.progress {
+    border-radius: 5px 5px 0px 0px;
+    background: #AD1FEA;
+    height: 6px;
 }
