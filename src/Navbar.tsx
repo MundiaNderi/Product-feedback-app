@@ -3,7 +3,7 @@ export default function Navbar(){
     return(
         <> 
         <div className="flex flex-col md:flex-row" >
-        <div className="bg-navyBlue flex flex-row  border border-y-green items-center  md:mr-40 md:mt-24 md:rounded-lg">
+        <div className="bg-navyBlue flex flex-row items-center  md:mr-40 md:mt-24 md:rounded-lg">
          <svg 
          className='hidden md:block my-6 ml-6 mr-4'
          xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none"><g clip-path="url(#clip0_12_5)">

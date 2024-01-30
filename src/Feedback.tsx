@@ -7,7 +7,8 @@ interface Feedback {
   title: string; 
   description: string; 
   status: string; 
-  comments: string[];
+  comments: { id: number; content: string; user: { /* ... */ } }[];
+
 }
 
 export default function Feedback() {

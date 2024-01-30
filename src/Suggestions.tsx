@@ -6,11 +6,41 @@ import Feedback from "./Feedback";
 import Header from "./Header";
 import getFeedbackData from '../feedbackService'
 
+interface User {
+  image: string;
+  name: string;
+  username: string;
+}
+
+interface Comment {
+  id: number;
+  content: string;
+  user: User;
+  replies?: Reply[];
+}
+
+interface Reply {
+  content: string;
+  replyingTo: string;
+  user: User;
+}
+
+interface FeedbackItem {
+  id: number;
+  title: string;
+  category: string;
+  upvotes: number;
+  status: string;
+  description: string;
+  comments: Comment[];
+}
+
+
 export default function Suggestions() {
-  const [feedbackData, setFeedbackData] = useState(getFeedbackData());
+  const [feedbackData, setFeedbackData] = useState<FeedbackItem[]>(getFeedbackData());
   const hasFeedback = Array.isArray(feedbackData) && feedbackData.length > 0;
 
-  const handleAddFeedback = (newFeedback) => {
+  const handleAddFeedback = (newFeedback: FeedbackItem) => {
     setFeedbackData([...feedbackData, newFeedback]);
   };
 
@@ -23,7 +53,7 @@ export default function Suggestions() {
           <Header/>
           <Navbar />
           {hasFeedback ? (
-            <Feedback FeedbackData={feedbackData} />
+            <Feedback feedbackData={feedbackData} />
           ) : (
             <div className="flex flex-col items-center justify-center h-full">
               <p>No feedback yet. Share your thoughts!</p>
