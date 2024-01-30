@@ -54,10 +54,10 @@ export default function Roadmap() {
             <div className='grid md:grid-cols-3 justify-evenly mt-12'>
 
                 {/*Planned Mobile*/}
-                     <div className={`md:hidden mx-6 flex-col border border-rose-500 md:flex-row ${toggleState === 1 ? " active-content" : "content"}`} >
+                     <div className={`md:hidden mx-6 flex-col  md:flex-row ${toggleState === 1 ? " active-content" : "content"}`} >
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >Planned (2)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Ideas prioritized for research</p>
-                    <div className='flex flex-col mt-8 rounded-md px-8 planned' >
+                    <div className='flex flex-col mt-8 rounded-md px-8 planned bg-white' >
                         <div className='flex flex-row items-center mt-6' >
                             <svg className='mr-4' xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                 <circle cx="4" cy="4" r="4" fill="#F49F85"/>
@@ -91,7 +91,7 @@ export default function Roadmap() {
                 <div className={"mx-6 hidden md:block "} >
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >Planned (2)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Ideas prioritized for research</p>
-                    <div className='flex flex-col mt-8 rounded-md px-8  bg-white' >
+                    <div className='flex flex-col mt-8 rounded-md px-8 bg-white planned' >
                         <div className='flex flex-row items-center mt-6' >
                             <svg className='mr-4' xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                 <circle cx="4" cy="4" r="4" fill="#F49F85"/>
@@ -122,10 +122,10 @@ export default function Roadmap() {
 
 
                 {/*In Progress Mobile*/}
-                     <div className={`mx-6 flex-col border border-rose-500 md:flex-row ${toggleState === 2 ? "active-content" : "content"}`}>
+                     <div className={`mx-6 flex-colmd:flex-row ${toggleState === 2 ? "active-content" : "content"}`}>
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >In-Progress (3)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Features currently being developed</p>
-                    <div className='flex flex-col mt-8 rounded-5 bg-white px-8 rounded-md ' >
+                    <div className='flex flex-col mt-8 rounded-5 bg-white px-8 progress rounded-md ' >
                         <div className='flex flex-row items-center mt-6 ' >
                             <svg  className='mr-4' xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                 <circle cx="4" cy="4" r="4" fill="#AD1FEA"/>
@@ -155,10 +155,10 @@ export default function Roadmap() {
                 </div>
 
                 {/*In progress Desktop */}
-                    <div className={"mx-6 hidden flex-col border border-rose-500 md:block"}>
+                    <div className={"mx-6 hidden flex-col  md:block"}>
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >In-Progress (3)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Features currently being developed</p>
-                    <div className='flex flex-col mt-8 rounded-5 px-8 rounded-md  bg-white' >
+                    <div className='flex flex-col mt-8 rounded-5 px-8 rounded-md progress bg-white' >
                         <div className='flex flex-row items-center mt-6 ' >
                             <svg  className='mr-4' xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                 <circle cx="4" cy="4" r="4" fill="#AD1FEA"/>
@@ -189,10 +189,10 @@ export default function Roadmap() {
 
 
                 {/*Live Mobile*/}
-                     <div className={`mx-6 flex-col border border-rose-500 md:flex-row ${toggleState === 3 ? "active-content" : "content"}`} >
+                     <div className={`mx-6 flex-col md:flex-row ${toggleState === 3 ? "active-content" : "content"}`} >
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >Live (1)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Released features</p>
-                    <div className='flex flex-col mt-8 rounded-5 bg-white px-8 live' >
+                    <div className='flex flex-col mt-8 rounded-5 px-8 bg-white live' >
                         <div className='flex flex-row items-center mt-6 ' >
                             <svg className='mr-4' xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                 <circle cx="4" cy="4" r="4" fill="#62BCFA"/>
@@ -222,7 +222,7 @@ export default function Roadmap() {
                 </div>
 
                 {/*Live Desktop */}
-                <div className={"hidden mx-6 flex-col border border-rose-500 md:block"} >
+                <div className={"hidden mx-6 flex-col  md:block"} >
                         <h1 className='font-jost text-xl font-bold leading-normal tracking-tighter text-darkNavy ' >Live (1)</h1>
                         <p className='font-jost text-base font-normal leading-normal text-darkNavy ' >Released features</p>
                     <div className='flex flex-col mt-8 rounded-5 bg-white px-8 live' >
@@ -252,8 +252,7 @@ export default function Roadmap() {
                             </div>
                         </div>
                     </div> 
-                </div>
-
+                    </div>
             </div>
             </div>
         </>

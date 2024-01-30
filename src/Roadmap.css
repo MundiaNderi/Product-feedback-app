@@ -1,8 +1,8 @@
-/* Your existing styles */
 .planned {
     border-radius: 5px 5px 0px 0px;
-    background: #F49F85;
-    height: 6px;
+    background: var(--Pure-White, #FFF);
+    box-shadow: 0px 0px 0px 0px #F49F85;
+    border-top: 6px solid #F49F85;
 }
 
 .active-content {
@@ -25,6 +25,14 @@
 
 .progress {
     border-radius: 5px 5px 0px 0px;
-    background: #AD1FEA;
-    height: 6px;
+    background: var(--Pure-White, #FFF);
+    box-shadow: 0px 0px 0px 0px #AD1FEA;
+    border-top: 6px solid #AD1FEA;
+}
+
+.live {
+    border-radius: 5px 5px 0px 0px;
+    background: var(--Pure-White, #FFF);
+    box-shadow: 0px 0px 0px 0px #62BCFA;
+    border-top: 6px solid #62BCFA;
 }
