@@ -1,4 +1,4 @@
-import "./Feedback.css";
+import "./FeedbackList.css";
 import FeedbackData from '../data.json';
 
 interface Feedback {

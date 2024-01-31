@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import Feedback from "./Feedback";
+import FeedbackList from "./FeedbackList";
 import Header from "./Header";
 import getFeedbackData from '../feedbackService'
 
@@ -35,9 +35,20 @@ interface FeedbackItem {
   comments: Comment[];
 }
 
+const newFeedback: FeedbackItem = {
+  id: 0,
+  title: '',
+  category: '',
+  upvotes: 0,
+  status: '',
+  description: '',
+  comments: [],
+};
+
 
 export default function Suggestions() {
   const [feedbackData, setFeedbackData] = useState<FeedbackItem[]>(getFeedbackData());
+
   const hasFeedback = Array.isArray(feedbackData) && feedbackData.length > 0;
 
   const handleAddFeedback = (newFeedback: FeedbackItem) => {
@@ -53,7 +64,7 @@ export default function Suggestions() {
           <Header/>
           <Navbar />
           {hasFeedback ? (
-            <Feedback feedbackData={feedbackData} />
+            <FeedbackList />
           ) : (
             <div className="flex flex-col items-center justify-center h-full">
               <p>No feedback yet. Share your thoughts!</p>
