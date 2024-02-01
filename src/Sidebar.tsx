@@ -1,7 +1,11 @@
 import '/src/Sidebar.css'
 import { Link } from 'react-router-dom';
+import RoadmapData from '../data.json';
 
 export default function Sidebar() {
+
+    console.log(RoadmapData)
+
     return (
         <div className='hidden mt-24 mr-8 ml-40 rounded-md md:flex md:flex-col' >
             {/*Feedback Board*/}

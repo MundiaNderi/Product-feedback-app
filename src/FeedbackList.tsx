@@ -12,7 +12,6 @@ interface Feedback {
 }
 
 export default function Feedback() {
-  console.log(FeedbackData);
 
   return (
     <div className="feedback grid grid-rows-6 rounded-lg md:mr-40 mt-6 ">
