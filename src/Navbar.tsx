@@ -32,7 +32,7 @@ export default function Navbar(){
                 <Button className="mr-4" />
             </div>
              {menuOpen && (
-            <div className="toggle absolute justify-center flex flex-col md:ml-48 bg-white mx-6 mt-10 md:mt-48 rounded-md">
+            <div className="toggle absolute justify-center flex flex-col md:ml-60 bg-white mx-6 mt-10 md:mt-48 rounded-md">
                 <a href="#" className="font-Jost text-16 font-normal text-lightGrey hover:text-lilac ml-6 mr-36 mt-3 py-3 " >Most Upvotes</a>
                 <hr />
                 <a href="#" className="font-Jost text-16 font-normal text-lightGrey hover:text-lilac ml-6 mr-32 py-3 ">Least Upvotes</a>
