@@ -35,8 +35,8 @@ export default function Feedback() {
                   {feedback.upvotes}
                 </p>
               </div>
-              <div className="mr-0 md:mr-40 md:ml-10 flex flex-col" >
-                <h2 className="font-jost text-darkNavy text-lg font-bold leading-normal tracking-tighter mt-6 md:mt-7 sm:mx-6 hover:text-blue ">
+              <div className="mr-0 md:mr-40 md:ml-10 flex justify-between  flex-col" >
+                <h2 className="font-jost text-darkNavy text-lg mx-6 font-bold leading-normal tracking-tighter mt-6 md:mt-7 sm:mx-6 hover:text-blue ">
                   {feedback.title}
                 </h2>
                 <p className="font-jost font-normal leading-normal text-lightGrey text-base mt-2 md:mt-1 mx-6 md:mx-6">
@@ -67,7 +67,7 @@ export default function Feedback() {
               </div>
 
               {/* Mobile only*/}
-              <div className="md:hidden flex items-center flex-row mt-4 mx-6 my-4 ">
+              <div className="md:hidden flex  items-center flex-row mt-4 mx-6 my-4 ">
                 <div className="flex flex-row items-center bg-pastelPurple rounded-lg w-16 h-8 hover:bg-blue ">
                   <svg
                     className="mr-2 ml-4 "
@@ -81,7 +81,7 @@ export default function Feedback() {
                   </svg>
                   <p className="text-center  font-jost text-13 font-bold leading-normal tracking-tight text-darkNavy mr-3 hover:text-white ">{feedback.upvotes}</p>
                 </div>
-                <div className="flex flex-row items-center mb-6 mt-4 ">
+                <div className="flex flex-row justify-center items-center mb-6 mt-5 ">
                   <svg
                     className="mr-1 ml-40"
                     xmlns="http://www.w3.org/2000/svg"

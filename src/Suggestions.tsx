@@ -55,7 +55,6 @@ export default function Suggestions() {
     setFeedbackData([...feedbackData, newFeedback]);
   };
 
-
   return (
     <>
       <div className="flex flex-row mb-8 ">
