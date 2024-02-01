@@ -40,8 +40,6 @@ This project is built with:
 - React.js
 - Tailwind CSS
 
-## Deploying your project
-
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+## Deployed project
 
 - [Netlify](https://lively-dodol-0b2db9.netlify.app)
