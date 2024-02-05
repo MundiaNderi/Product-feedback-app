@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 interface ButtonProps {
   onClick?: () => void;
-  className?: string; // Add className prop
+  className?: string; 
 }
 
 const Button: React.FC<ButtonProps> = ({ onClick, className }) => {

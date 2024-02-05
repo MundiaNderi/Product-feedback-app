@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./FeedbackList.css";
 import FeedbackData from '../data.json';
 
@@ -30,9 +31,9 @@ export default function Feedback() {
                 >
                   <path d="M1.33447 6L5.33447 2L9.33447 6" stroke="#4661E6" stroke-width="2" />
                 </svg>
-                <p className="text-center font-jost text-13 font-bold leading-normal tracking-tight text-darkNavy mb-2 mx-3 hover:text-white ">
+                <Link  to="/editfeedback" className="text-center font-jost text-13 font-bold leading-normal tracking-tight text-darkNavy mb-2 mx-3 hover:text-white ">
                   {feedback.upvotes}
-                </p>
+                </Link>
               </div>
               <div className="mr-0 md:mr-40 md:ml-10 flex justify-between  flex-col" >
                 <h2 className="font-jost text-darkNavy text-lg mx-6 font-bold leading-normal tracking-tighter mt-6 md:mt-7 sm:mx-6 hover:text-blue ">
@@ -78,7 +79,7 @@ export default function Feedback() {
                   >
                     <path d="M1.33447 6L5.33447 2L9.33447 6" stroke="#4661E6" stroke-width="2" />
                   </svg>
-                  <p className="text-center  font-jost text-13 font-bold leading-normal tracking-tight text-darkNavy mr-3 hover:text-white ">{feedback.upvotes}</p>
+                  <Link to='/editfeedback' className="text-center  font-jost text-13 font-bold leading-normal tracking-tight text-darkNavy mr-3 hover:text-white ">{feedback.upvotes}</Link>
                 </div>
                 <div className="flex flex-row justify-center items-center mb-6 mt-5 ">
                   <svg

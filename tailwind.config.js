@@ -23,7 +23,8 @@ export default {
         peach: 'hsla(14, 83%, 74%, 1)',
         lightBlue: 'hsla(204, 94%, 68%, 1)',
         red: 'hsla(0, 67%, 53%, 1)',
-        tealBlue: 'hsla(230, 100%, 91%, 1)'
+        tealBlue: 'hsla(230, 100%, 91%, 1)',
+        babyBlue: 'hsla(230, 91%, 73%, 1)'
        }
     },
      fontFamily: {
