@@ -75,7 +75,7 @@ export default function FeedbackEdit() {
                     I would love to be able to browse Frontend Mentor in the evening after
                     my device’s dark mode turns on without the bright background it currently has.
                 </p>
-                <PostReplyForm  className="hidden md:flex "/>
+                <PostReplyForm/>
                 </div>
                  <hr className="mb-6 md:mt-8" />
              {/*Person 2*/}
