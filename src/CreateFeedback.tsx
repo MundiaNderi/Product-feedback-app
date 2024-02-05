@@ -37,13 +37,9 @@ import { Link } from 'react-router-dom';
                     <p className="font-jost text-base font-normal leading-normal text-lightGrey" >Choose a category for your feedback</p>
                      <select  className="bg-pastelPurple focus:outline-none w-full h-10 px-4 feature "id="fruit " name="fruit">
                         <option  value="apple" className="bg-pastelPurple focus:outline-none mt-2" >Feature</option>
-                        <hr />
                         <option className="bg-white border border-red-500 " value="ui">UI</option>
-                        <hr />
                         <option value="UX">UX</option>
-                        <hr />
                         <option value="enhancement">Enhancement</option>
-                        <hr />
                         <option value="bug" >Bug</option>
                     </select>
                 </div>
